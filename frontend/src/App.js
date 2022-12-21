@@ -39,7 +39,7 @@ function App() {
     <BrowserRouter>
       <Header />
         <Routes>
-          <Route element={<RoutesUserChat />}>
+          {/* <Route element={<RoutesUserChat />}> */}
             <Route path="/" element={<HomePage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/register" element={<Registration />} />
@@ -55,7 +55,7 @@ function App() {
               <Route path="/user/cart-details" element={<UserCart />} />
               <Route path="/user/order-details" element={<UserOrderDetails />} />
             </Route>
-          </Route>
+          {/* </Route> */}
 
           <Route element={<ProtectedRoutes admin={true} />}>
             <Route path="/admin/users" element={<AdminUsersPage />} />
