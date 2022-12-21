@@ -1,9 +1,23 @@
 import { Outlet, Navigate } from "react-router-dom"
+import UserCart from "../pages/user/UserCart"
+import UserChat from "./user/UserChat"
 
-const ProtectedRoutes = () => {
-    const auth = false
+const ProtectedRoutes = ({ admin }) => {
 
-    return auth ? <Outlet /> : <Navigate to="/login" />
+
+    if (admin) {
+        let adminAuth = true
+        return adminAuth ? <Outlet /> : <Navigate to="/login" />
+    } else {
+        let userAuth = true;
+        return userAuth ? (
+            <>
+                <UserChat /> <Outlet />
+            </>
+        ) : (<Navigate to="/login" />
+        )
+    }
+
 }
 
 export default ProtectedRoutes;
