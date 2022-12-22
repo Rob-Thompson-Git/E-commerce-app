@@ -9,4 +9,4 @@ const RoutesUserChat = () => {
     )
 }
 
-export default UserChat;
+export default RoutesUserChat;

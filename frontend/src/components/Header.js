@@ -21,7 +21,10 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
                 <LinkContainer to="/">
-                    <Navbar.Brand href="/">Qwiks</Navbar.Brand>
+                    <Navbar.Brand>
+                    <i class="bi bi-lightning-charge-fill"></i>
+                        Qwiks
+                    </Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
